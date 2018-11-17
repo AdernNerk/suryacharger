@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Surya Chargers</title>
+
+  <!-- view port and encoding type-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <!-- /viewport and encoding type -->
+
+  <!-- w3.css -->
+  <link rel="stylesheet" type="text/css" href="./css/w3.css">
+  <!-- /w3.css -->
+
+  <!-- jquery -->
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <!-- /jquery -->
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- /fontawesome -->
+
+  <!-- fonts from google -->
+  <link href="https://fonts.googleapis.com/css?family=Poor+Story|Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Dancing+Script|Patrick+Hand|Poppins:800|Ubuntu" rel="stylesheet">
+  <!-- /fonts from google -->
+
+</head>
+<body>
+
+<style type="text/css">
+body
+{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 17px;
+}
+.pads
+{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+@media (max-width:600px)
+{
+  .pads
+  {
+    padding-left: 10px;
+    padding-right: 10px;  
+  }
+}
+@media (max-width:900px) and (min-width:601px)
+{
+  .pads
+  {
+    padding-left: 30px;
+    padding-right: 30px;  
+  }
+}
+</style>
+
+<!-- nav -->
+<div id="nav"></div>
+<script type="text/javascript">
+if($(document).width()<601)
+{
+  $("#nav").load("./part/small-nav.html");
+}
+else
+{
+  $("#nav").load("./part/big-nav.html");
+}
+</script>
+<!-- /nav -->
+
+<!-- first -->
+<style type="text/css">
+.first img
+{
+	width: 100%;
+	height: auto;
+	margin-bottom: 32px;
+}
+</style>
+<div class="w3-container first">
+	<img src="./images/1.jpg">
+</div>
+<!-- /first -->
+
+<!-- second -->
+<style type="text/css">
+.second
+{
+  margin-bottom: 30px;
+}
+.aura,.aurb,.aurc,.aurd,.aure,.aurf,.aurg
+{
+  padding:5px;
+  margin: 5px;  
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  padding-top:8px;
+  color: #fff;
+  border:2px solid #20202020;
+  text-align: center;
+  cursor: pointer;
+}
+.aura
+{
+  background-color: #3aaf85;
+}
+.aurb
+{
+  background-color: #0084ff;  
+}
+.aurc
+{
+  background-color: #df2029;
+}
+.aurd
+{
+  background-color: #55acee;
+}
+.aure
+{
+  background-color: #e4405f;
+}
+.aurf
+{
+  background-color: #cd201f;  
+}
+.aurg
+{
+  background-color: #09b83e;  
+}
+.extra-h5
+{
+  font-family: 'Poor Story', cursive;
+    text-align: center;
+    font-size: 36px;
+    color: #101010;
+    font-weight: 600;
+}
+#contact-content
+{
+  border-radius: 3px;
+  border:2px dotted #404040;
+  padding:10px;
+  padding-top:15px;
+  padding-bottom: 15px;
+}
+</style>
+<div class="w3-container second pads w3-padding-64">
+  <div class="w3-container extra-h5">
+    CONTACT US
+    <hr>
+  </div>
+  <br>
+  <div class="w3-container">
+    <div class="w3-half">
+      <h3 style="font-weight: 800;border-bottom:2px dotted #404040;width:200px;">Address</h3>
+      Shop No. 200, Second Floor,<br>
+      Dayal Market, Alipur,<br>
+      Delhi - 110036.
+    </div>
+    <div class="w3-half">
+      <div class="w3-container w3-center">
+        <i class="fas aura fa-phone-volume"></i>
+        <i class="fab aurb fa-facebook-messenger"></i>
+        <i class="fas aurc fa-envelope"></i>
+        <i class="fab aurd fa-twitter"></i>
+        <i class="fab aure fa-instagram"></i>
+        <i class="fab aurf fa-youtube"></i>
+        <i class="fab aurg fa-whatsapp"></i>
+      </div>
+      <div class="w3-container w3-center w3-margin w3-margin" id="contact-content">
+        +91 9211771117
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(".aurc").click(function(){
+  $("#contact-content").html("tirthrana@gmail.com");
+});
+$(".aura").click(function(){
+  $("#contact-content").html("+91 9211771117");
+});
+$(".aurb").click(function(){
+  $("#contact-content").html("@suryacharger");
+});
+$(".aurd").click(function(){
+  $("#contact-content").html("@suryacharger");
+});
+$(".aure").click(function(){
+  $("#contact-content").html("We will come soon on Instagram");
+});
+$(".aurf").click(function(){
+  $("#contact-content").html("We will come soon on YouTube");
+});
+$(".aurg").click(function(){
+  $("#contact-content").html("+91 9211771117");
+});
+</script>
+<!-- /second -->
+
+
+<!--address-->
+<div class="w3-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.398418265427!2d77.13088631418442!3d28.79719868336182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d009dbdfc9635%3A0x103e10ef2f2216e0!2sTSS+%2C+Dayal+Market%2C!5e0!3m2!1sen!2sin!4v1542264189283" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<!--/address-->
+
+<!-- footer -->
+<div id="footer"></div>
+<script type="text/javascript">
+$("#footer").load('./part/footer.html');
+</script>
+<!-- /footer -->
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Surya Chargers</title>
+
+  <!-- view port and encoding type-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <!-- /viewport and encoding type -->
+
+  <!-- w3.css -->
+  <link rel="stylesheet" type="text/css" href="./css/w3.css">
+  <!-- /w3.css -->
+
+  <!-- jquery -->
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <!-- /jquery -->
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <!-- /fontawesome -->
+
+  <!-- fonts from google -->
+  <link href="https://fonts.googleapis.com/css?family=Poor+Story|Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Dancing+Script|Patrick+Hand|Poppins:800|Ubuntu" rel="stylesheet">
+  <!-- /fonts from google -->
+
+</head>
+<body>
+
+<style type="text/css">
+body
+{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 17px;
+}
+.pads
+{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+@media (max-width:600px)
+{
+  .pads
+  {
+    padding-left: 10px;
+    padding-right: 10px;  
+  }
+}
+@media (max-width:900px) and (min-width:601px)
+{
+  .pads
+  {
+    padding-left: 30px;
+    padding-right: 30px;  
+  }
+}
+.extra-h5
+{
+    font-family: 'Poor Story', cursive;
+    text-align: center;
+    font-size: 36px;
+    color: #101010;
+    font-weight: 600;
+    border-bottom:2px dotted #404040;
+    margin:auto;
+}
+</style>
+
+<!-- nav -->
+<div id="nav"></div>
+<script type="text/javascript">
+if($(document).width()<601)
+{
+  $("#nav").load("./part/small-nav.html");
+}
+else
+{
+  $("#nav").load("./part/big-nav.html");
+}
+</script>
+<!-- /nav -->
+
+<!-- first -->
+<style type="text/css">
+.first img
+{
+	width: 100%;
+  height: auto;
+	margin-bottom: 32px;
+}
+</style>
+<div class="w3-container first">
+	<img src="./images/1.jpg">
+</div>
+<!-- /first -->
+
+<!--support-->
+<style type="text/css">
+.extea-h6
+{
+    font-family: 'Poor Story', cursive;
+    font-size: 26px;
+    color: #101010;
+    font-weight: 600;
+    margin:auto;
+}
+</style>
+<div class="w3-container pads second w3-padding-32">
+  <div class="extra-h5" style="width: 200px;">SUPPORT US</div>
+  <br><br>
+  <div class="extea-h6" id="terms">Terms & Condition</div>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <br><br><br>
+  <div class="extea-h6" id="return">Return & Cancellation</div>
+  <ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</li>
+    <li>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</li>
+    <li>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</li>
+    <li>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</li>
+    <li>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</li>
+    <li>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+  </ul>
+  <br><br>
+  <div class="extea-h6" id="shipping">Shiping & Delivery</div>
+  <ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</li>
+    <li>tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</li>
+    <li>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</li>
+    <li>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</li>
+    <li>cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</li>
+    <li>proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+  </ul>
+  <br><br>
+</div>
+<!--/support-->
+
+
+<!-- second -->
+<style type="text/css">
+.second img
+{
+	width:100%;
+	height: auto;
+}
+</style>
+<div class="w3-container second pads">
+
+</div>
+<!-- /second -->
+
+<!-- footer -->
+<div id="footer"></div>
+<script type="text/javascript">
+$("#footer").load('./part/footer.html');
+</script>
+<!-- /footer -->
+
+</body>
+</html>

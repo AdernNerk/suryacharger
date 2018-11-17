@@ -22,6 +22,7 @@
 
   <!-- fonts from google -->
   <link href="https://fonts.googleapis.com/css?family=Poor+Story|Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Dancing+Script|Patrick+Hand|Poppins:800|Ubuntu" rel="stylesheet">
   <!-- /fonts from google -->
 
 </head>
@@ -57,66 +58,17 @@ body
 </style>
 
 <!-- nav -->
-<style type="text/css">
-.navigation
+<div id="nav"></div>
+<script type="text/javascript">
+if($(document).width()<601)
 {
-  background-color: #0e0e0f;
-  width:100%;
-  height:65px;
-  background-image: url("./images/footer.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  color: white;
-  padding-top: 5px;
-  padding-bottom: 0px;
-  padding-left: 15px;
-  padding-right: 15px;
+  $("#nav").load("./part/small-nav.html");
 }
-.navigation img
+else
 {
-  height: 55px;
-  width:auto;
+  $("#nav").load("./part/big-nav.html");
 }
-.accesseries
-{
-  font-size:20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right:15px;
-  padding-top: 10px;
-  cursor: pointer;
-  float:left;
-  transition: 0.3s;
-  -o-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -webkit-transition: 0.3s;
-}
-.accesseries:hover
-{
-  border-bottom:2px solid lightblue;
-  transition: 0.3s;
-  -o-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -webkit-transition: 0.3s;
-}
-</style>
-<div class="w3-container navigation">
-  <a href="#" class="w3-left w3-margin-right" name="Surya Chargers"><img src="./images/imageedit_13_7612303461.png" class="surya-logo"></a>
-  <div class="accesseries">
-    Cables
-  </div>
-  <div class="accesseries">
-    Chargers
-  </div>
-  <div class="accesseries">
-    About Us
-  </div>
-  <div class="accesseries">
-    Contact
-  </div>
-</div>
+</script>
 <!-- /nav -->
 
 
@@ -261,10 +213,16 @@ body
   color: #101010;
   font-weight: 600;
 }
+#about img
+{
+  max-width: 170px;
+  text-align: center;
+  margin-top:35px;
+}
 </style>
-<div class="w3-container pads w3-padding-64">
+<div class="w3-container pads w3-padding-64" id="about">
   <div class="w3-quarter">
-    <img src="./">
+    <img src="./svg/001-man.svg">
   </div>
   <div class="w3-threequarter">
     <span class="about-heading">
@@ -283,81 +241,25 @@ body
 </div>
 <!-- /about us section -->
 
+<!-- reviews -->
+<div id="review"></div>
+<script type="text/javascript">
+if($(document).width()>800)
+{
+$("#review").load('./big-review.html');
+}
+else
+{
+$("#review").load('./small-review.html');
+}
+</script>
+<!-- /reviews -->
+
 <!-- footer -->
-<style type="text/css">
-.footer
-{
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("./images/footer.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #050505;
-  color: #f2f2f2;
-  padding-top:62px;
-  padding-bottom: 25px;
-}
-.footer .inactive
-{
-  color: grey;
-}
-.footer .three i
-{
-  margin-left: 6px;
-  margin-right: 6px;
-  font-size: 20px;
-}
-.footer .outer
-{
-  margin-bottom: 20px;
-}
-</style>
-<div class="w3-container footer pads">
-<div class="w3-container outer"> 
-  <div class="w3-container two">
-    <div class="w3-container w3-quarter">
-      <div class="inactive w3-margin-bottom">Contact</div>
-      <div>Phone</div>
-      <div>Email ID</div>
-      <div>Address</div>
-      <div>Messenger</div>
-    </div>
-    <div class="w3-container w3-quarter">
-      <div class="inactive w3-margin-bottom">Shop Cables</div>
-      <div>USB - B</div>
-      <div>USB - C</div>
-      <div>Lightning</div>
-    </div>
-    <div class="w3-container w3-quarter">
-      <div class="inactive w3-margin-bottom">Shop Charger</div>
-      <div>USB - B</div>
-      <div>USB - C</div>
-      <div>Lightning</div>
-      <div>Fast Charger</div>
-    </div>
-    <div class="w3-container w3-quarter">
-      <div class="inactive w3-margin-bottom">Company</div>
-      <div>Contact Us</div>
-      <div>Support</div>
-      <div>Terms & Condition</div>
-      <div>Return & Cancellation</div>
-      <div>Shipping & Delivery</div>
-    </div>
-  </div>
-</div>
-  <hr class="w3-container">
-  <div class="w3-container three">
-    <div class="w3-left">
-      Copyright &copy; 2018 Surya Chargers. All rights reserved.
-    </div>
-    <div class="w3-right">
-      <i class="fab fa-facebook-f"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-whatsapp"></i>
-      <i class="inactive fab fa-youtube"></i>
-      <i class="fab fa-instagram"></i>
-    </div>
-  </div>
-</div>
+<div id="footer"></div>
+<script type="text/javascript">
+$("#footer").load('./part/footer.html');
+</script>
 <!-- /footer -->
 
 </body>
