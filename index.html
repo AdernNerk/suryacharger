@@ -28,39 +28,10 @@
 </head>
 <body>
 
-<style type="text/css">
-body
-{
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 17px;
-}
-.pads
-{
-  padding-left: 15%;
-  padding-right: 15%;
-}
-@media (max-width:600px)
-{
-  .pads
-  {
-    padding-left: 10px;
-    padding-right: 10px;  
-  }
-}
-@media (max-width:900px) and (min-width:601px)
-{
-  .pads
-  {
-    padding-left: 30px;
-    padding-right: 30px;  
-  }
-}
-</style>
-
 <!-- nav -->
 <div id="nav"></div>
 <script type="text/javascript">
-if($(document).width()<601)
+if($(document).width()<661)
 {
   $("#nav").load("./part/small-nav.html");
 }
@@ -73,55 +44,17 @@ else
 
 
 <!-- boxes -->
-<style type="text/css">
-
-.painter
+<div id="boxes"></div>
+<script type="text/javascript">
+if($(document).width()<801)
 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  -webkit-transition: 0.5s;
+  $("#boxes").load('./part/slider.html');
 }
-.painter:hover
+else
 {
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-left: 1px;
-  padding-right: 1px;
-  transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  -webkit-transition: 0.5s;
+  $("#boxes").load('./part/boxes.html');
 }
-.painter img
-{
-  width: 100%;
-  height: 100%;
-}
-
-</style>
-<div class="w3-container pads" style="padding-bottom: 64px;">
-  <div class="w3-half painter">
-    <img src="./images/ezgif.com-webp-to-jpg (1).jpg">
-  </div>
-  <div class="w3-half">
-    <div class="w3-container" style="margin:0px;padding:0px;">
-      <div class="w3-half painter">
-        <img src="./images/ezgif.com-webp-to-jpg (2).jpg">  
-      </div>
-      <div class="w3-half painter">
-        <img src="./images/ezgif.com-webp-to-jpg (3).jpg">
-      </div>
-    </div>
-    <div class="w3-container painter">
-      <img src="./images/ezgif.com-webp-to-jpg.jpg">
-    </div>
-  </div>
-</div>
+</script>
 <!-- /boxes -->
 
 <!-- featured product -->

@@ -1,4 +1,33 @@
 <style type="text/css">
+body
+{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 17px;
+}
+.pads
+{
+  padding-left: 15%;
+  padding-right: 15%;
+}
+@media (max-width:600px)
+{
+  .pads
+  {
+    padding-left: 10px;
+    padding-right: 10px;  
+  }
+}
+@media (max-width:900px) and (min-width:601px)
+{
+  .pads
+  {
+    padding-left: 30px;
+    padding-right: 30px;  
+  }
+}
+</style>
+
+<style type="text/css">
 .navigation
 {
   background-color: #0e0e0f;
@@ -43,26 +72,31 @@
   -webkit-transition: 0.3s;
 }
 </style>
-<div class="w3-container navigation">
+<div class="w3-container navigation pads">
   <a href="./index.html" class="w3-left w3-margin-right" name="Surya Chargers"><img src="./images/imageedit_13_7612303461.png" class="surya-logo"></a>
-  <a href="./cable.html">
-    <div class="accesseries">
-    Cables
-    </div>
-  </a>
-  <a href="./charger.html"">
-    <div class="accesseries">
-      Chargers
-    </div>
-  </a>
-  <a href="./index.html#about">
-    <div class="accesseries">
-      About Us
+  <a href="./support.html">
+    <div class="accesseries w3-right">
+      Support
     </div>
   </a>
   <a href="./contact.html">
-    <div class="accesseries">
+    <div class="accesseries w3-right">
       Contact
+    </div>
+  </a>
+  <a href="./index.html#about">
+    <div class="accesseries w3-right">
+      About Us
+    </div>
+  </a>
+  <a href="./cable.html">
+    <div class="accesseries w3-right">
+    Cables
+    </div>
+  </a>
+  <a href="./charger.html">
+    <div class="accesseries w3-right">
+      Chargers
     </div>
   </a>
 </div>

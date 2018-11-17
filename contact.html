@@ -28,39 +28,11 @@
 </head>
 <body>
 
-<style type="text/css">
-body
-{
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 17px;
-}
-.pads
-{
-  padding-left: 15%;
-  padding-right: 15%;
-}
-@media (max-width:600px)
-{
-  .pads
-  {
-    padding-left: 10px;
-    padding-right: 10px;  
-  }
-}
-@media (max-width:900px) and (min-width:601px)
-{
-  .pads
-  {
-    padding-left: 30px;
-    padding-right: 30px;  
-  }
-}
-</style>
 
 <!-- nav -->
 <div id="nav"></div>
 <script type="text/javascript">
-if($(document).width()<601)
+if($(document).width()<661)
 {
   $("#nav").load("./part/small-nav.html");
 }
