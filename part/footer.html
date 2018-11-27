@@ -28,22 +28,38 @@ a
 {
   margin-bottom: 20px;
 }
+.warning
+{
+  min-height: 40px;
+  height: auto;
+  overflow: hidden;
+  font-size: 18px;
+  color: #fff;
+  background-color: #101010;
+  padding-top: 5px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
 </style>
+
+<div class="w3-container warning">
+  Actual product may differ in look, photos used on this website are just for showing purposes.
+</div>
 <div class="w3-container footer pads">
 <div class="w3-container outer"> 
   <div class="w3-container two">
     <div class="w3-container w3-quarter">
       <div class="inactive w3-margin-bottom">Contact</div>
       <a href="./contact.html#phone"><div>Phone</div></a>
-      <a href="./contact.html#email"><div>Email ID</div></a>
+      <a href='https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tirthrana@gmail.com&tf=1' target='_blank'><div>Email ID</div></a>
       <a href="./contact.html#address"><div>Address</div></a>
-      <a href="./contact.html#messenger"><div>Messenger</div></a>
+      <a href="https://www.facebook.com/messages/t/tirth.rana.7355" target="_blank"><div>Messenger</div></a>
     </div>
     <div class="w3-container small-see" style="display:none"><br><br></div>
     <div class="w3-container w3-quarter">
       <div class="inactive w3-margin-bottom">Shop Cables</div>
       <a href="./cable.html#usb-B"><div>USB - B / USB - A</div></a>
-      <a href="./cable.html#usb-B"><div>USB - C / USB - A</div></a>
+      <a href="./cable.html#usb-C"><div>USB - C / USB - A</div></a>
       <a href="./cable.html#lightning"><div>Lightning / USB - A</div></a>
       <a href="./cable.html#multi"><div>Multi port / USB - A</div></a>
       <a href="./cable.html#extra-long"><div>Extra long</div></a>
@@ -77,9 +93,9 @@ a
       Copyright &copy; 2018 Surya Chargers. All rights reserved.
     </div>
     <div class="w3-right">
-      <i class="fab fa-facebook-f"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-whatsapp"></i>
+      <a href="https://www.facebook.com/tirth.rana.7355" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <i class="inactive fab fa-twitter"></i>
+      <i class="fab fa-whatsapp open-modal-variable" style="cursor: pointer;" data-modal="#modal1-variable"></i>
       <i class="inactive fab fa-youtube"></i>
       <i class="inactive fab fa-instagram"></i>
     </div>
@@ -90,4 +106,158 @@ if($(document).width()<600)
 {
   $(".small-see").show();
 }
+</script>
+
+
+<style>
+
+.title-variable
+{
+color:#3171d8;
+font-size:25px;
+}
+.content-variable p
+{
+font-size:18px;
+}
+
+.close-modal-variable
+{
+background-color:#e88651;
+padding:10px;
+margin:5px;
+color:#fff;
+font-size:18px;
+text-decoration:none;
+width:100px;
+border-radius:3px;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+.close-modal-variable:hover
+{
+  background-color: tomato;
+}
+.overlay-variable {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-variable.open-variable {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-variable .modal-variable {
+  background: white;
+  text-variablelign: center;
+  padding: 40px 80px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  z-index: 5000;
+  pointer-events: none;
+  transition: 0.35s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.overlay-variable .modal-variable.open-variable {
+  opacity: 1;
+  pointer-events: inherit;
+}
+.overlay-variable .modal-variable.open-variable .content-variable {
+  transform: translate(0, 0px);
+  opacity: 1;
+}
+.overlay-variable .modal-variable .content-variable {
+  transform: translate(0, -10px);
+  opacity: 0;
+  transition: 0.35s ease-in-out;
+}
+.overlay-variable .modal-variable .title-variable {
+  margin-top: 0;
+}
+@media screen and ( max-width: 650px )
+{
+  .overlay-variable, #modal1-variable
+  {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+
+  }
+}
+</style>
+
+<div class='modal-variable' id='modal1-variable'>
+  <div class='content-variable'>
+    <div class='title-variable'>WhatsApp</div>
+    <hr>
+    <div>
+      +91 9211771117
+    </div>
+    <br>
+    <a class='close-modal-variable' data-modal="#modal1-variable" href="#">Okay</a>
+  </div>  
+</div>  
+
+<script>
+$(".modal-variable").each( function(){
+  $(this).wrap('<div class="overlay-variable"></div>')
+});
+
+$(".open-modal-variable").on('click', function(e){
+  e.preventDefault();
+  e.stopImmediatePropagation;
+  
+  var $this = $(this),
+      modal = $($this).data("modal");
+  
+  $(modal).parents(".overlay-variable").addClass("open-variable");
+  setTimeout( function(){
+    $(modal).addClass("open-variable");
+  }, 350);
+  
+  $(document).on('click', function(e){
+    var target = $(e.target);
+    
+    if ($(target).hasClass("overlay-variable")){
+      $(target).find(".modal-variable").each( function(){
+        $(this).removeClass("open-variable");
+      });
+      setTimeout( function(){
+        $(target).removeClass("open-variable");
+      }, 350);
+    }
+    
+  });
+  
+});
+
+$(".close-modal-variable").on('click', function(e){
+  e.preventDefault();
+  e.stopImmediatePropagation;
+  
+  var $this = $(this),
+      modal = $($this).data("modal");
+  
+  $(modal).removeClass("open-variable");
+  setTimeout( function(){ 
+    $(modal).parents(".overlay-variable").removeClass("open-variable");
+  }, 350);
+  
+}); 
 </script>
